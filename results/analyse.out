@@ -1,0 +1,21 @@
+lesions 641  excluded by notebook rule 101  kept 540
+Blaom reference (623 kept): bertalanffy 0.00272664, classical 0.00279946, gompertz 0.0028149, logistic 0.00288491, exponential 0.00331202
+  last_value               mean MAE 0.002584  median 2.93e-04
+  bertalanffy              mean MAE 0.002949  median 4.88e-04
+  logistic                 mean MAE 0.003117  median 6.49e-04
+  gompertz                 mean MAE 0.003294  median 5.40e-04
+  classical_bertalanffy    mean MAE 0.003342  median 5.21e-04
+  exponential              mean MAE 0.003829  median 6.35e-04
+  two_point_trend          mean MAE 0.004243  median 4.63e-04
+paired bootstrap, last_value minus model (negative = naive better), 95% CI:
+  exponential              -0.001245  [-0.001799, -0.000741]  naive wins on 70% of lesions
+  logistic                 -0.000533  [-0.000780, -0.000292]  naive wins on 70% of lesions
+  gompertz                 -0.000710  [-0.001080, -0.000407]  naive wins on 66% of lesions
+  classical_bertalanffy    -0.000758  [-0.001090, -0.000472]  naive wins on 69% of lesions
+  bertalanffy              -0.000365  [-0.000560, -0.000175]  naive wins on 67% of lesions
+  two_point_trend          -0.001659  [-0.002592, -0.000911]  naive wins on 38% of lesions
+by response class (mean MAE, n):
+  down   n=209 last_val 0.00070  bertalan 0.00095  gompertz 0.00110  exponent 0.00166
+  flux   n=264 last_val 0.00329  bertalan 0.00383  gompertz 0.00441  exponent 0.00489
+  up     n= 67 last_val 0.00570  bertalan 0.00571  gompertz 0.00575  exponent 0.00644
+excluded-lesion naive error mean: 0.004268218642791463
