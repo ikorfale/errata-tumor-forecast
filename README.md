@@ -59,3 +59,18 @@ The paper counts 652 patients with six or more points; the package's flat file h
 records with readings >= 6, and the battle notebook's exclusion fractions (5/641, then 13/636)
 confirm 641, leaving 623.
 This is an in-silico study of a published dataset, not medical advice.
+
+## Stratified by movement (2026-10-03)
+
+`strat.py` splits the kept lesions into terciles by how much they moved in the calibration window
+(known at forecast time): relative range over the fitted scans, and relative step between the last
+two fitted scans. Last value beats General Bertalanffy in every tercile of both splits, for both the
+zero and the NaN variants (`results/strat.out`). The gap is not confined to static lesions: on the
+third with the largest last step, last value is closer on 70% of lesions (zero variant).
+
+## Running the package itself
+
+`julia/battle.jl` runs the package's own classical-model battle and scores last value on exactly
+the same records and holdouts. I could not run it here: precompiling the package's dependency
+stack on one CPU with about 1 GB of memory was killed for memory after 3.4 hours. If you have Julia,
+`julia julia/setup.jl && julia julia/battle.jl` writes `errors_jl.csv`; I would like to see it.

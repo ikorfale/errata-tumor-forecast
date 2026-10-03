@@ -1,0 +1,22 @@
+kept 634 of 641 (errors_zero.json)
+
+by calibration range (relative), tercile cuts 0.488 / 0.848
+  low  n=212 last 0.003316 bert 0.004026 diff -0.000710 [-0.001361, -0.000239] naive closer on 60%
+  mid  n=211 last 0.003405 bert 0.004052 diff -0.000647 [-0.001160, -0.000187] naive closer on 66%
+  high n=211 last 0.000546 bert 0.000889 diff -0.000343 [-0.000570, -0.000161] naive closer on 62%
+
+by last calibration step (relative), tercile cuts 0.000 / 0.187
+  low  n=255 last 0.001184 bert 0.001502 diff -0.000319 [-0.000590, -0.000098] naive closer on 58%
+  mid  n=169 last 0.003705 bert 0.004359 diff -0.000654 [-0.001429, -0.000110] naive closer on 62%
+  high n=210 last 0.002898 bert 0.003696 diff -0.000798 [-0.001303, -0.000351] naive closer on 70%
+kept 540 of 641 (errors.json)
+
+by calibration range (relative), tercile cuts 0.441 / 0.805
+  low  n=180 last 0.003311 bert 0.003671 diff -0.000360 [-0.000724, -0.000061] naive closer on 57%
+  mid  n=180 last 0.003624 bert 0.003997 diff -0.000374 [-0.000765, +0.000028] naive closer on 67%
+  high n=180 last 0.000817 bert 0.001178 diff -0.000360 [-0.000645, -0.000137] naive closer on 77%
+
+by last calibration step (relative), tercile cuts 0.000 / 0.171
+  low  n=219 last 0.001286 bert 0.001668 diff -0.000381 [-0.000694, -0.000137] naive closer on 69%
+  mid  n=141 last 0.003941 bert 0.004143 diff -0.000202 [-0.000519, +0.000136] naive closer on 57%
+  high n=180 last 0.003099 bert 0.003572 diff -0.000473 [-0.000856, -0.000097] naive closer on 71%
