@@ -2,7 +2,8 @@
 Resampling is by lesion within the group; 10,000 draws; seed fixed. Negative = last value better."""
 import json, math, numpy as np
 from collections import defaultdict
-rows = json.load(open("errors.json"))
+import sys
+rows = json.load(open(sys.argv[1] if len(sys.argv) > 1 else "errors.json"))
 classical = ["exponential", "logistic", "gompertz", "classical_bertalanffy", "bertalanffy"]
 good = [r for r in rows if all(math.isfinite(r["err"][m]) and r["err"][m] <= 0.1 for m in classical)]
 rng = np.random.default_rng(20261004)
