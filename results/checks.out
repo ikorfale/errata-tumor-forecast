@@ -1,0 +1,13 @@
+kept 634 of 641
+MAE last 0.002424  bert 0.002990  anchored bert (last value + model increment) 0.002761
+  last minus anchored -0.000338 [-0.000595, -0.000137]  anchored closer on 23%, tied 40%
+  last minus bert     -0.000567 [-0.000839, -0.000325]
+model offset at last calibration scan: mean |fit - last| 0.000661, mean signed -0.000272
+sign test (predicted increment vs observed change, both nonzero): 165/323 = 51.1% [Wilson 45.7%, 56.5%]; observed change zero on 160, predicted zero on 248
+bias last value mean signed (pred - obs) -0.001368 [-0.001908, -0.000875]  share of MAE 58%
+bias bert       mean signed (pred - obs) -0.001915 [-0.002527, -0.001343]  share of MAE 65%
+exact repeats (last two calibration values equal): 255 of 634; by calibration-range tercile (cuts 0.488/0.848):
+  low  n=212 repeats 91 (43%)
+  mid  n=211 repeats 54 (26%)
+  high n=211 repeats 110 (52%)
+  without repeats n=379: last minus bert -0.000734 [-0.001166, -0.000378] naive closer on 66%
