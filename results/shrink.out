@@ -1,0 +1,12 @@
+kept 634; in-sample best c -0.0 (MAE 0.002424); c=0 0.002424, c=1 0.002761
+cross-fitted c per fold [-0.0, -0.0, -0.0, -0.05, -0.0]
+all: n=634  MAE last 0.002424  anchored(c=1) 0.002761  shrunk(cross-fit) 0.002426
+    last - shrunk    -0.000002 [-0.000005, -0.000001]
+    last - anchored  -0.000338 [-0.000586, -0.000137]
+moving (holdout mean != last value): n=474  MAE last 0.003242  anchored(c=1) 0.003650  shrunk(cross-fit) 0.003244
+    last - shrunk    -0.000003 [-0.000006, -0.000000]
+    last - anchored  -0.000408 [-0.000745, -0.000128]
+static: n=160  MAE last 0.000000  anchored(c=1) 0.000129  shrunk(cross-fit) 0.000002
+    last - shrunk    -0.000002 [-0.000004, -0.000000]
+    last - anchored  -0.000129 [-0.000244, -0.000044]
+best c fitted on moving lesions only (in-sample, optimistic): -0.05
