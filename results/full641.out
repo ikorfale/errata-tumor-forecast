@@ -1,0 +1,5 @@
+excluded 101: bertalanffy NaN 34, bertalanffy >0.1 1, bertalanffy finite<=0.1 66
+kept 540                                                       n=540 gap -0.000365 [-0.000563, -0.000176] naive wins 67%
+excluded 101 (own forecast, NaN->last value)                   n=101 gap -0.000314 [-0.000598, -0.000033] naive wins 54%
+all 641 (own forecast, NaN->last value)                        n=641 gap -0.000357 [-0.000532, -0.000193] naive wins 65%
+all 641, every excluded lesion -> last value (zenith bound)    n=641 gap -0.000307 [-0.000472, -0.000148] naive wins 56%

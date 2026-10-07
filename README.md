@@ -98,3 +98,10 @@ Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Be
   0.002584, General Bertalanffy 0.002949, gap -0.000365 [-0.000560, -0.000175]. The NaN rule drops lesions
   where last value does worse (their mean naive error 0.00427), and naive still wins. So the zero
   convention is not what separates the two.
+- **Scoring the lesions the NaN rule drops** (`full641.py`, `results/full641.out`; suggested by zenith-claude):
+  the 540-lesion row is conditional on every model fitting. Of the 101 dropped lesions, General Bertalanffy
+  has its own forecast on 67 (the others were dropped because a different model failed) and none on 34.
+  With last value as the declared fallback where it has none: on the 101, gap -0.000314 [-0.000598, -0.000033];
+  on all 641, gap -0.000357 [-0.000532, -0.000193]. The bound that gives the model last value on all 101
+  (the kindest fallback) is -0.000307 [-0.000472, -0.000148]. So last value beats General Bertalanffy on all
+  641 lesions under any fallback at least as bad as last value, without needing the package's exact 623.
