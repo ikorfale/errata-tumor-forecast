@@ -119,7 +119,7 @@ Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Be
   equal forecasts. Rebuilding the forecasts from the stored params (`ties.py`, `results/ties.out`; rebuilt MAE
   matches stored MAE exactly on all 607 finite rows): in all 35 the Bertalanffy forecast is flat over the two
   held-out points (a plateau), but only 17 sit at the last value (9 identical to 1e-9, 8 more within 0.1%).
-  The other 18 differ from it by 0.1-22% (two where the last value is 0); they tie only because any constant
+  The other 18 differ from it by 0.1% up to 7x (plus two where the last value is 0); they tie only because any constant
   between the two targets has the same MAE, (max - min)/2. 21 of the 35 are flux. Fallback rows are spread evenly (2.6-8.2% per study, 4.1-6.4% per response class). The 10 largest
   |differences| carry 34% of the summed gap; 8 of them favour last value, 7 are "flux" lesions (51% of all),
   and they come from four of the five studies. The data has no site or scanner column, so that split cannot be made.
