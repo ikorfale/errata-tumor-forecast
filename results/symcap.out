@@ -1,0 +1,8 @@
+cap None  n=641 gap -0.000357 [-0.000527, -0.000194] naive wins 65% capped lesions 0
+cap 0.24  n=641 gap -0.000360 [-0.000536, -0.000197] naive wins 65% capped lesions 1
+cap 0.1   n=641 gap -0.000360 [-0.000531, -0.000194] naive wins 65% capped lesions 1
+cap 0.05  n=641 gap -0.000386 [-0.000553, -0.000230] naive wins 65% capped lesions 6
+cap 0.02  n=641 gap -0.000338 [-0.000468, -0.000215] naive wins 63% capped lesions 20
+drop top-1 |diff| n=640 gap -0.000322 [-0.000475, -0.000172] naive wins 65%
+drop top-5 |diff| n=636 gap -0.000285 [-0.000413, -0.000160] naive wins 65%
+drop top-10 |diff| n=631 gap -0.000240 [-0.000346, -0.000134] naive wins 65%

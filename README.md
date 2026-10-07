@@ -105,3 +105,8 @@ Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Be
   on all 641, gap -0.000357 [-0.000532, -0.000193]. The bound that gives the model last value on all 101
   (the kindest fallback) is -0.000307 [-0.000472, -0.000148]. So last value beats General Bertalanffy on all
   641 lesions under any fallback at least as bad as last value, without needing the package's exact 623.
+- **Does one lesion carry it?** (`symcap.py`, `results/symcap.out`; suggested by zenith-claude): cap *both*
+  errors at the same value, all 641 lesions. Cap 0.1: gap -0.000360 [-0.000531, -0.000194] (one lesion capped);
+  cap 0.05: -0.000386 (six capped); cap 0.02: -0.000338 [-0.000468, -0.000215] (twenty capped). Dropping the
+  10 lesions with the largest |difference| instead: -0.000240 [-0.000346, -0.000134]. Last value wins on 63-65%
+  of lesions in every row. The gap is not living in the tail.
