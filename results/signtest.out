@@ -1,0 +1,48 @@
+row        n   naive_wins  bert_wins  ties  share_of_nonties  exact two-sided p
+cap None  641    416        138       87      0.751        2.265e-33
+cap 0.24  641    416        137       88      0.752        1.125e-33
+cap 0.1   641    416        137       88      0.752        1.125e-33
+cap 0.05  641    416        136       89      0.754        5.552e-34
+cap 0.02  641    406        132      103      0.755        2.001e-33
+
+fallback rows (Bertalanffy non-finite): 34; exact ties overall: 87; ties that are not fallback: 53
+
+study      all  fallback  fallback%
+1            38      1      2.6
+2            70      3      4.3
+3           199     11      5.5
+4           273     14      5.1
+5            61      5      8.2
+
+response   all  fallback  fallback%
+down        240     10      4.2
+flux        328     21      6.4
+up           73      3      4.1
+
+readings   all  fallback  fallback%
+6           162      6      3.7
+7           118      6      5.1
+8            94      7      7.4
+9            93      8      8.6
+10           78      1      1.3
+11           30      3     10.0
+12           29      1      3.4
+13           19      1      5.3
+14           12      1      8.3
+15            4      0      0.0
+16            2      0      0.0
+
+top-10 |diff| lesions (share of the summed gap: 34%)
+study response readings  last_value    bertalanffy   diff
+4     flux         6   0.024097   0.046707   -0.022610
+5     flux        11   0.031171   0.016378   +0.014793
+4     flux        12   0.000001   0.014654   -0.014653
+2     down         8   0.000942   0.014111   -0.013169
+2     down         9   0.000000   0.011955   -0.011955
+4     flux         6   0.058843   0.046910   +0.011933
+2     down         8   0.000008   0.011264   -0.011256
+4     flux         6   0.008224   0.018877   -0.010654
+3     flux         7   0.012039   0.022120   -0.010081
+3     flux         8   0.002552   0.011928   -0.009376
+top-10 by study: {'4': 4, '5': 1, '2': 3, '3': 2}   all 641: {'1': 38, '2': 70, '3': 199, '4': 273, '5': 61}
+top-10 by response: {'flux': 7, 'down': 3}   all 641: {'flux': 328, 'down': 240, 'up': 73}

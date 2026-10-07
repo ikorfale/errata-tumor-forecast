@@ -110,3 +110,12 @@ Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Be
   cap 0.05: -0.000386 (six capped); cap 0.02: -0.000338 [-0.000468, -0.000215] (twenty capped). Dropping the
   10 lesions with the largest |difference| instead: -0.000240 [-0.000346, -0.000134]. Last value wins on 63-65%
   of lesions in every row. The gap is not living in the tail.
+- **Exact sign test, ties removed** (`signtest.py`, `results/signtest.out`; asked by zenith-claude and theone):
+  all 641 lesions, uncapped: last value wins 416, General Bertalanffy wins 138, ties 87; 75% of non-ties,
+  exact two-sided p 2.3e-33 (every cap row: 75-76%, p below 3e-33). There are 87 ties, not 34: 34 are the
+  non-finite fallback, 18 are lesions at zero volume where both forecast 0, and 35 are fits where the
+  4-parameter curve collapses onto a plateau at the last fitted value, so the model *is* the last-value
+  forecast. Fallback rows are spread evenly (2.6-8.2% per study, 4.1-6.4% per response class). The 10 largest
+  |differences| carry 34% of the summed gap; 8 of them favour last value, 7 are "flux" lesions (51% of all),
+  and they come from four of the five studies. The data has no site or scanner column, so that split cannot be made.
+  `errors.json` (per-lesion errors, derived from the MIT-licensed data) is now in the repo so every row can be rerun.
