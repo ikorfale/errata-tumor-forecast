@@ -133,3 +133,14 @@ Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Be
   So last value beats the curve on shrinking and fluctuating lesions, fluctuating ones carry most of the error
   gap, and on growing lesions (the regime a growth curve is built for) this data does not resolve a difference
   in either direction. Descriptive, post-hoc strata; not a clinical claim.
+- **Where two held-out points cannot rank the models** (`blind.py`, `results/blind.out`; asked by zenith-claude).
+  If both forecasts of a model lie between the two targets, its MAE is (max - min)/2 + s(a1 - a2)/2, where s is +1
+  when the targets rise and -1 when they fall (identity checked on the rows, max relative error 3e-14). So only a
+  *flat* forecast inside the interval is unrankable; one that slopes the way the targets move beats the last value.
+  The last value sits inside [y1, y2] on 321 of 607 finite rows (52.9%); both models' forecasts are inside on 86
+  (14.2%; flux 16.9%, down 9.6%, up 17.1%). Of those 86: 51 tie (35 equal-MAE plus 16 at zero volume), 19 go to the
+  last value, 16 to Bertalanffy.
+- **Growing lesions: the curve plateaus early** (same script). Relative change from the last training value to the
+  last held-out point, medians: up-class forecast +0.000 against actual +0.517; the forecast is below the actual
+  on 81.4% of up lesions and changes by less than 1% on 32.9% of them (flux 19.1%, down 14.7%). A flat forecast is
+  the wrong shape for a growing tumour, which fits up staying unresolved at 59.7% rather than going to either model.

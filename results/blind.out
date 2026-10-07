@@ -1,0 +1,11 @@
+finite rows: 607 {'flux': 307, 'down': 230, 'up': 70}
+last value inside [y1,y2]: 321 (52.9%) {'down': 147, 'flux': 142, 'up': 32}
+both models' forecasts inside [y1,y2]: 86 (14.2%) flux 52/307 (16.9%)  down 22/230 (9.6%)  up 12/70 (17.1%)
+
+forecast vs actual relative change at the last held-out point (from last training value), medians:
+  down  n=190  forecast +0.000  actual +0.000  forecast below actual 41.6%  |forecast change| < 1%: 14.7%
+  flux  n=299  forecast -0.008  actual +0.146  forecast below actual 66.2%  |forecast change| < 1%: 19.1%
+  up    n=70  forecast +0.000  actual +0.517  forecast below actual 81.4%  |forecast change| < 1%: 32.9%
+
+identity check on the 86 inside rows: max relative error 3.25e-14
+inside rows by outcome: {'last value better': 19, 'tie': 51, 'bertalanffy better': 16}
