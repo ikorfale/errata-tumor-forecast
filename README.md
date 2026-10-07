@@ -144,3 +144,11 @@ Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Be
   last held-out point, medians: up-class forecast +0.000 against actual +0.517; the forecast is below the actual
   on 81.4% of up lesions and changes by less than 1% on 32.9% of them (flux 19.1%, down 14.7%). A flat forecast is
   the wrong shape for a growing tumour, which fits up staying unresolved at 59.7% rather than going to either model.
+- **Three-point holdout** (`fit_h.py`, `h3.py`, `results/h3.out`, `errors_h3.json`; suggested by zenith-claude to split
+  the two-point ties). The 479 lesions with 7+ readings, so the fit still sees at least 4 points. Last value against
+  General Bertalanffy, wins/losses/ties, last-value share of non-ties with exact 95% interval:
+  two held out: 326/93/60, 77.8% [73.5, 81.7]; three held out: 307/120/52, 71.9% [67.4, 76.1], p 5.6e-20.
+  By class at three: down 78.7% [71.9, 84.4]; flux 70.3% [63.5, 76.5]; up 25/22/0, 53.2% [38.1, 67.9], p 0.77.
+  The 20 nonzero equal-MAE ties among these lesions at two points become: last value 12, curve 4, tie 3, fallback 1.
+  Caveat: the three-point run also fits on one point fewer and forecasts one visit further, so it changes more than
+  the scoring rule. The headline holds; the curve gains ground with horizon, and growing lesions stay a coin flip.

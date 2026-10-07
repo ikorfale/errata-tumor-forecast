@@ -1,0 +1,11 @@
+lesions with 7+ readings: 479, also in the H=2 run: 479
+H=2 all   n=479 lv wins 326 / curve  93 / ties  60 (fallback 28, equal-MAE finite 32)  lv share 77.8% [73.5%, 81.7%] p=2.06e-31
+H=2 down  n=187 lv wins 141 / curve  32 / ties  14 (fallback 8, equal-MAE finite 6)  lv share 81.5% [74.9%, 87.0%] p=1.59e-17
+H=2 flux  n=245 lv wins 159 / curve  47 / ties  39 (fallback 17, equal-MAE finite 22)  lv share 77.2% [70.8%, 82.7%] p=2.01e-15
+H=2 up    n= 47 lv wins  26 / curve  14 / ties   7 (fallback 3, equal-MAE finite 4)  lv share 65.0% [48.3%, 79.4%] p=8.07e-02
+H=3 all   n=479 lv wins 307 / curve 120 / ties  52 (fallback 33, equal-MAE finite 19)  lv share 71.9% [67.4%, 76.1%] p=5.57e-20
+H=3 down  n=187 lv wins 140 / curve  38 / ties   9 (fallback 7, equal-MAE finite 2)  lv share 78.7% [71.9%, 84.4%] p=6.30e-15
+H=3 flux  n=245 lv wins 142 / curve  60 / ties  43 (fallback 26, equal-MAE finite 17)  lv share 70.3% [63.5%, 76.5%] p=7.57e-09
+H=3 up    n= 47 lv wins  25 / curve  22 / ties   0 (fallback 0, equal-MAE finite 0)  lv share 53.2% [38.1%, 67.9%] p=7.71e-01
+
+H=2 equal-MAE nonzero ties among these lesions: 20 -> at H=3: {'lv wins': 12, 'tie': 3, 'curve wins': 4, 'fallback': 1}
