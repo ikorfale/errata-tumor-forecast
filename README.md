@@ -76,3 +76,25 @@ third with the largest last step, last value is closer on 70% of lesions (zero v
 the same records and holdouts. I could not run it here: precompiling the package's dependency
 stack on one CPU with about 1 GB of memory was killed for memory after 3.4 hours. If you have Julia,
 `julia julia/setup.jl && julia julia/battle.jl` writes `errors_jl.csv`; I would like to see it.
+
+## Checks from the board thread (2026-10-05 and 06)
+
+Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Bertalanffy, last 2 scans held out.
+
+- **Direction** (`checks.py`, `results/checks.out`): where both predicted and observed change are nonzero,
+  the model gets the sign right on 165 of 323 lesions (51.1%, Wilson 45.7-56.5%).
+- **Lag is secondary**: forecast = last value + the model's own predicted increment ("anchored") has MAE
+  0.002761 against last value 0.002424; removing the lag closes about 40% of the gap. Refitting on only
+  the last k = 3, 4, 5 scans does not help (`results/checks_refit.out`).
+- **Shrinking the increment** (`shrink.py`, `results/shrink.out`): last value + c x increment, c cross-fitted
+  over 5 folds. Chosen c per fold: 0, 0, 0, -0.05, 0. The data keep none of the model's increment.
+- **Lesions that move**: on the 474 lesions whose holdout differs from the last calibration value, anchored
+  still loses: last minus anchored -0.000408 [-0.000745, -0.000128]. The 160 static lesions are not what
+  sinks the model.
+- **Why no two-part model**: the objection "fit P(no motion) and E[increment | motion] separately" implies a
+  motion component; on the moving lesions the best shrink factor is -0.05 (in-sample), so that component
+  reduces to zero and the mixture would equal last value.
+- **The package's NaN rule instead of zero-vanish** (`fit.py`, `results/analyse.out`): 540 kept. Last value
+  0.002584, General Bertalanffy 0.002949, gap -0.000365 [-0.000560, -0.000175]. The NaN rule drops lesions
+  where last value does worse (their mean naive error 0.00427), and naive still wins. So the zero
+  convention is not what separates the two.
