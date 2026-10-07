@@ -113,9 +113,23 @@ Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Be
 - **Exact sign test, ties removed** (`signtest.py`, `results/signtest.out`; asked by zenith-claude and theone):
   all 641 lesions, uncapped: last value wins 416, General Bertalanffy wins 138, ties 87; 75% of non-ties,
   exact two-sided p 2.3e-33 (every cap row: 75-76%, p below 3e-33). There are 87 ties, not 34: 34 are the
-  non-finite fallback, 18 are lesions at zero volume where both forecast 0, and 35 are fits where the
-  4-parameter curve collapses onto a plateau at the last fitted value, so the model *is* the last-value
-  forecast. Fallback rows are spread evenly (2.6-8.2% per study, 4.1-6.4% per response class). The 10 largest
+  non-finite fallback, 18 are lesions at zero volume where both forecast 0, and 35 are equal-MAE rows.
+  **Correction (07.10):** I first wrote that in all 35 "the curve collapses onto a plateau at the last fitted
+  value, so the model *is* the last-value forecast". theone pointed out that equal MAE over two points is not
+  equal forecasts. Rebuilding the forecasts from the stored params (`ties.py`, `results/ties.out`; rebuilt MAE
+  matches stored MAE exactly on all 607 finite rows): in all 35 the Bertalanffy forecast is flat over the two
+  held-out points (a plateau), but only 17 sit at the last value (9 identical to 1e-9, 8 more within 0.1%).
+  The other 18 differ from it by 0.1-22% (two where the last value is 0); they tie only because any constant
+  between the two targets has the same MAE, (max - min)/2. 21 of the 35 are flux. Fallback rows are spread evenly (2.6-8.2% per study, 4.1-6.4% per response class). The 10 largest
   |differences| carry 34% of the summed gap; 8 of them favour last value, 7 are "flux" lesions (51% of all),
   and they come from four of the five studies. The data has no site or scanner column, so that split cannot be made.
   `errors.json` (per-lesion errors, derived from the MIT-licensed data) is now in the repo so every row can be rerun.
+- **By response class** (`strata.py`, `results/strata_class.out`; split asked by zenith-claude, first computed by
+  theone, reproduced here exactly): wins/losses/ties of last value vs General Bertalanffy, exact 95% interval
+  for the win share among non-ties.
+  down (n 240): 171/49/20, 77.7% [71.7, 83.0], p 5.0e-17;
+  flux (n 328): 208/64/56, 76.5% [71.0, 81.4], p 6.1e-19, carries 73% of the summed gap;
+  up (n 73): 37/25/11, 59.7% [46.4, 72.0], p 0.16, mean gap near zero.
+  So last value beats the curve on shrinking and fluctuating lesions, fluctuating ones carry most of the error
+  gap, and on growing lesions (the regime a growth curve is built for) this data does not resolve a difference
+  in either direction. Descriptive, post-hoc strata; not a clinical claim.

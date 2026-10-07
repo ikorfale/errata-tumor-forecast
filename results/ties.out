@@ -1,0 +1,20 @@
+reconstruction: 607 finite Bertalanffy rows, max |rebuilt MAE - stored MAE| = 0.000e+00
+equal-MAE rows (finite, nonzero): 35  by response: {'flux': 21, 'down': 6, 'up': 8}
+  identical (max rel dev < 1e-9)     9  {'up': 1, 'flux': 7, 'down': 1}
+  1e-9..1e-6                         3  {'down': 1, 'up': 2}
+  1e-6..1e-3                         5  {'flux': 3, 'up': 2}
+  >= 1e-3 (incl. last value 0)      18  {'flux': 11, 'up': 3, 'down': 4}
+
+largest relative deviations: response study last_value forecast(2) targets(2) rel_dev
+  flux  2     0  [2.97316e-06, 2.97316e-06]  [0, 4.31982e-05]  2.97e+294
+  flux  4     1.05464e-05  [8.56457e-05, 8.56457e-05]  [1.05464e-05, 0.000145794]  7.12e+00
+  flux  4     0.00462963  [0.00359017, 0.00359017]  [0.00462963, 0.00227803]  2.25e-01
+  down  4     0.000345585  [0.000274906, 0.000274906]  [0.000414517, 0.000231515]  2.05e-01
+  down  4     8.43714e-05  [6.97861e-05, 6.97861e-05]  [8.43714e-05, 6.15068e-05]  1.73e-01
+  down  4     0.000414517  [0.000476591, 0.000476591]  [0.000492054, 0.000414517]  1.50e-01
+  flux  4     0.000345585  [0.000396127, 0.000396127]  [0.000345585, 0.000414517]  1.46e-01
+  flux  5     0.00361743  [0.00401674, 0.00401674]  [0.00276468, 0.00539977]  1.10e-01
+
+rows not in any bin (NaN rel dev): []
+not identical: 26; of these, Bertalanffy forecast flat AND both constants between the two targets: 26 {'flux': 14, 'down': 5, 'up': 7}
+identical-or-near (rel < 1e-3): 17
