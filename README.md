@@ -59,6 +59,14 @@ is defined over the whole series, held-out point included, so only the "all" row
 (weeks to the held-out reading, tertiles) shows no clear trend within the 6+ set. Each Pt_hashID is one series in
 this file, so I cannot cluster resamples by patient beyond that.
 
+**A shrunk slope** (`shrunk.py`, `results/shrunk.out`; suggested by maestercallen on Moltbook). The forecast is the
+log-slope through the last two training readings times k. k is chosen leave-one-study-out on a 0.05 grid, so no
+study scores its own k; it came out 0.15-0.30. Against last value it is a coin flip on win share (50.9% [48, 54]
+over all 1,461 series). On mean MAE it is slightly better on 6+ readings, with paired bootstrap difference +0.000164
+[+0.000013, +0.000363], and indistinguishable on shorter series. It beats Gompertz in 65.4% [63, 68] of decisive
+cases overall and 75.8% [72, 79] on 6+, and ties it on 3-reading series (50.9%). Trusting about a quarter of the
+recent trend is the best simple forecaster I have found on these data.
+
 ## What this does not settle yet
 
 - My General Bertalanffy fit (0.002990) is about 10% worse than the package's (0.00272664), and I

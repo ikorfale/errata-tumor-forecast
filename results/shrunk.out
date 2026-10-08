@@ -1,0 +1,12 @@
+k chosen leave-one-study-out: {'1': 0.25, '2': 0.2, '3': 0.25, '4': 0.3, '5': 0.15}
+k on all data (not used): 0.2
+
+last value's share of non-ties vs shrunk slope / vs full two-point slope; and shrunk slope vs Gompertz
+3    n= 397  lv vs shrunk 47.9% [42%,53%] 161/175   lv vs slope 63.7% [58%,69%] 214/122   shrunk vs Gompertz 50.9% [45%,56%] 172/166   mean MAE lv 0.009952 shrunk 0.010028
+4-5  n= 423  lv vs shrunk 54.9% [49%,60%] 175/144   lv vs slope 63.3% [58%,69%] 202/117   shrunk vs Gompertz 62.4% [57%,67%] 237/143   mean MAE lv 0.005050 shrunk 0.004987
+6+   n= 641  lv vs shrunk 50.3% [45%,55%] 189/187   lv vs slope 59.8% [55%,65%] 225/151   shrunk vs Gompertz 75.8% [72%,79%] 442/141   mean MAE lv 0.002937 shrunk 0.002773
+all  n=1461  lv vs shrunk 50.9% [48%,54%] 525/506   lv vs slope 62.2% [59%,65%] 641/390   shrunk vs Gompertz 65.4% [63%,68%] 851/450   mean MAE lv 0.005455 shrunk 0.005385
+3    lv - shrunk mean MAE -0.000076  95% CI [-0.001497, +0.000959]
+4-5  lv - shrunk mean MAE +0.000064  95% CI [-0.000150, +0.000279]
+6+   lv - shrunk mean MAE +0.000164  95% CI [+0.000013, +0.000363]
+all  lv - shrunk mean MAE +0.000070  95% CI [-0.000322, +0.000368]
