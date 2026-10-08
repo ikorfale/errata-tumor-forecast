@@ -1,0 +1,10 @@
+== early-ending: last T_weeks < 0.5 x max T_weeks of its study/arm; series with n>=6, raw errors ==
+early n=178  two_point_trend: 62/60/56 -> 50.8% [42.1, 59.5]  exponential: 121/53/4 -> 69.5% [62.3, 75.9]  gompertz: 121/48/9 -> 71.6% [64.4, 77.9]
+full  n=463  two_point_trend: 163/91/209 -> 64.2% [58.1, 69.8]  exponential: 351/101/11 -> 77.7% [73.6, 81.3]  gompertz: 326/88/49 -> 78.7% [74.5, 82.4]
+
+== early-ending: last T_weeks < 0.75 x max T_weeks of its study/arm; series with n>=6, raw errors ==
+early n=458  two_point_trend: 164/117/177 -> 58.4% [52.5, 64.0]  exponential: 320/125/13 -> 71.9% [67.6, 75.9]  gompertz: 323/99/36 -> 76.5% [72.3, 80.3]
+full  n=183  two_point_trend: 61/34/88 -> 64.2% [54.2, 73.1]  exponential: 152/29/2 -> 84.0% [77.9, 88.6]  gompertz: 124/37/22 -> 77.0% [69.9, 82.8]
+
+arms: 14  median arm max weeks: 61.0
+__END__

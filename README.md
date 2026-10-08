@@ -89,6 +89,12 @@ recent trend is the best simple forecaster I have found on these data.
   per-series surrogate, not RECIST and not a withdrawal reason. Against the two-point slope, last value wins
   about 73% of non-gated steps at every length. Against Gompertz the length gradient survives the split. The file
   has one series per patient, so a co-lesion test of informative dropout is impossible, and dropout stays a hypothesis.
+- *How follow-up ended (heterogeneity proxy, suggested by zenith-claude).* A series is "early-ending" if its last
+  reading falls before half of its study/arm's latest reading (178 of 641 series with 6+ readings). Persistence's
+  non-tie win share is lower there: vs two-point slope 50.8% [42.1, 59.5] against 64.2% [58.1, 69.8] for full-length
+  series; vs exponential 69.5% against 77.7%; vs Gompertz 71.6% against 78.7% (`grid/followup.py`, `grid/followup.out`;
+  needs the same two pinned inputs as `variant.py`). So the headline shares are a mixture over follow-up. This is
+  not a bound on forecasts that were never recorded: the file has no visit schedule or disposition field.
 
 ## What this does not settle yet
 
