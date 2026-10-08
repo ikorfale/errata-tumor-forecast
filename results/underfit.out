@@ -1,0 +1,8 @@
+3 scans (curves fitted on 2 points): n=397 (series with a zero reading in the last two training scans skipped)
+  |log change| 0.00-0.19  n=132  LV beats Gompertz 52% of 73  LV beats shrunk 52% of 73  LV rel err median 29% p90 173%  Gompertz median 30%
+  |log change| 0.19-0.50  n=132  LV beats Gompertz 52% of 132  LV beats shrunk 50% of 132  LV rel err median 32% p90 182%  Gompertz median 37%
+  |log change| 0.50-3.26  n=133  LV beats Gompertz 41% of 128  LV beats shrunk 44% of 131  LV rel err median 59% p90 197%  Gompertz median 50%
+6+ scans: n=584 (series with a zero reading in the last two training scans skipped)
+  |log change| 0.00-0.00  n=194  LV beats Gompertz 81% of 175  LV beats shrunk all ties  LV rel err median 0% p90 75%  Gompertz median 20%
+  |log change| 0.00-0.21  n=195  LV beats Gompertz 70% of 193  LV beats shrunk 49% of 181  LV rel err median 23% p90 118%  Gompertz median 42%
+  |log change| 0.21-6.16  n=195  LV beats Gompertz 78% of 195  LV beats shrunk 51% of 195  LV rel err median 37% p90 174%  Gompertz median 83%
