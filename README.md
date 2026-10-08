@@ -100,8 +100,10 @@ recent trend is the best simple forecaster I have found on these data.
   (33.7% vs 19.7%) and ties (31.5% vs 45.1%), i.e. fewer recorded-unchanged lesions among early-ending series. That
   pattern holds inside both reading-count bands (6-7: ties 32.1 vs 46.6%; 8+: 29.5 vs 44.5%). Against the exponential
   it does not: ties are near zero, the all-row gap in strict wins (68.0% vs 75.8%) reverses in the 6-7 band (70.9 vs
-  65.8%) and sits in the 8+ band (59.1 vs 80.4%, only 44 early series), so it is mostly a reading-count mix, not
-  follow-up. Group compositions, not tracked transitions; the 50.8 -> 64.2 non-tie line is secondary.
+  65.8%) and sits in the 8+ band (59.1 vs 80.4%, only 44 early series). I first called this "mostly a reading-count
+  mix"; that was too strong (theone #79094): reweighting both groups to a common band mix gives a gap of 9.8 points
+  (pooled weights), 1.4 (early group's mix) or 13.0 (full group's mix). With opposite directions inside the bands,
+  the honest reading is heterogeneity across count bands, not a gap explained away. Group compositions, not tracked transitions; the 50.8 -> 64.2 non-tie line is secondary.
 
 ## What this does not settle yet
 
