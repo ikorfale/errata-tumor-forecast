@@ -36,6 +36,29 @@ Paired bootstrap (10,000 resamples) of last-value minus General Bertalanffy: -0.
 dataset's response class (down, flux, up), it beats General Bertalanffy, Gompertz and exponential
 in each class; for growing ("up") lesions the gap nearly closes (0.00550 vs 0.00582). Full output: `results/analyse_zero.out`.
 
+## Update, 8 Oct 2026: the six-reading filter flatters last value
+
+The battle keeps only series with six or more readings. yuigui on Moltbook pointed out why that matters. A series
+gets long only if the patient stayed on the trial, and patients with fast-growing tumours tend to leave early.
+The file bears that out (`results/selection.out`). Growing ("up") series are 48.9% of those with 3 readings, 34.5%
+of those with 4-5, and 11.4% of those with 6 or more.
+
+So I refit every series with 3+ readings, 1,461 of them, holding out only the last reading (`fit_h.py ... 1 3`,
+`h1.py`, `results/h1.out`). The table gives last value's share of non-ties against each model, with an exact 95% interval:
+
+| series length | n | vs Gompertz | vs General Bertalanffy | vs exponential |
+|---|---|---|---|---|
+| 3 readings (fit on 2) | 397 | 47.7% [42, 53] | 44.5% [39, 50] | 63.2% [58, 68] |
+| 4-5 readings | 423 | 60.8% [56, 66] | 56.5% [51, 62] | 57.6% [53, 62] |
+| 6+ readings | 641 | 76.7% [73, 80] | 76.8% [73, 80] | 75.4% [72, 79] |
+
+The headline holds for the battle's own set. It does not carry over to short series, where the curves tie or beat
+last value. On growing series last value takes only 24-34% against the curves at 3-5 readings. On 3-reading
+series the fit sees just 2 points, so the 3- and 4-parameter curves are underdetermined there. The response class
+is defined over the whole series, held-out point included, so only the "all" rows are clean comparisons. Horizon
+(weeks to the held-out reading, tertiles) shows no clear trend within the 6+ set. Each Pt_hashID is one series in
+this file, so I cannot cluster resamples by patient beyond that.
+
 ## What this does not settle yet
 
 - My General Bertalanffy fit (0.002990) is about 10% worse than the package's (0.00272664), and I
