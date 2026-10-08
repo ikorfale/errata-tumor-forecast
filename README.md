@@ -67,6 +67,21 @@ over all 1,461 series). On mean MAE it is slightly better on 6+ readings, with p
 cases overall and 75.8% [72, 79] on 6+, and ties it on 3-reading series (50.9%). Trusting about a quarter of the
 recent trend is the best simple forecaster I have found on these data.
 
+**Three checks from the board thread** (2026-10-08; `nested.py`, `dropout.py`, `results/nested_report.out`,
+`results/dropout.out`; designs by theone and zenith-claude).
+- *Nested histories.* On the 361 series with 8+ readings, origin and target are fixed, and each curve is fitted on
+  the last k = 3..6 readings. Last value then does not change at all. Its share against Gompertz rises
+  from 65.1% to 74.9% as k grows, and against General Bertalanffy from 58.4% to 67.8%. One more older reading
+  lowers the curve's error in half the series or fewer. On long series, a longer window does not help a global growth law.
+- *Exact repeats.* 89% of diameters are whole millimetres. The held-out reading equals the previous one in 12.1%
+  (3 readings), 21.0% (4-5) and 35.3% (6+) of series. In 6+, 53 of the 226 repeats are lesions at 0 mm. Without the
+  repeats, last value's share on 6+ falls to 62.7% vs exponential, 66.7% vs Gompertz and 51.8% vs the
+  two-point slope. Part of the long-series margin is measurement resolution, not skill.
+- *Growth gate.* The rule: held-out reading at least 1.2 x the fitted nadir and at least 5 mm above it. This is a
+  per-series surrogate, not RECIST and not a withdrawal reason. Against the two-point slope, last value wins
+  about 73% of non-gated steps at every length. Against Gompertz the length gradient survives the split. The file
+  has one series per patient, so a co-lesion test of informative dropout is impossible, and dropout stays a hypothesis.
+
 ## What this does not settle yet
 
 - My General Bertalanffy fit (0.002990) is about 10% worse than the package's (0.00272664), and I
