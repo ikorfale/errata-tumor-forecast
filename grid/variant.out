@@ -1,0 +1,177 @@
+{
+  "scope": "Independent arithmetic on published H1 coefficients; no refit or repository-code execution. The 1-mm grid is a sensitivity scenario, not a verified measurement mechanism. The whole-mm subset is selected from complete observed series, not pre-registered or selected only at forecast time.",
+  "prediction_checks": {
+    "two_point_trend": {
+      "rows": 1461,
+      "max_abs_discrepancy": 3.1086244689504383e-15,
+      "bad": 0
+    },
+    "exponential": {
+      "rows": 1461,
+      "max_abs_discrepancy": 0.0,
+      "bad": 0
+    },
+    "gompertz": {
+      "rows": 1460,
+      "max_abs_discrepancy": 0.0,
+      "bad": 0
+    }
+  },
+  "subset_nonfinite": {
+    "two_point_trend": 0,
+    "exponential": 0,
+    "gompertz": 0
+  },
+  "scenarios": [
+    {
+      "scenario": "raw_hist_integer",
+      "method": "two_point_trend",
+      "n": 552,
+      "persistence_wins": 182,
+      "curve_wins": 121,
+      "ties": 249,
+      "persistence_non_tie_share": 0.6006600660066007,
+      "mean_persistence_minus_curve_error": -0.001624549749942692
+    },
+    {
+      "scenario": "1mm_hist_integer",
+      "method": "two_point_trend",
+      "n": 552,
+      "persistence_wins": 180,
+      "curve_wins": 120,
+      "ties": 252,
+      "persistence_non_tie_share": 0.6,
+      "mean_persistence_minus_curve_error": -0.0016312772274583386
+    },
+    {
+      "scenario": "target_nonint_among_hist_int",
+      "method": "two_point_trend",
+      "n": 552,
+      "persistence_wins": 0,
+      "curve_wins": 0,
+      "ties": 552,
+      "persistence_non_tie_share": 0.0,
+      "mean_persistence_minus_curve_error": 0.0
+    },
+    {
+      "scenario": "raw_integer_subset",
+      "method": "two_point_trend",
+      "n": 548,
+      "persistence_wins": 181,
+      "curve_wins": 119,
+      "ties": 248,
+      "persistence_non_tie_share": 0.6033333333333334,
+      "mean_persistence_minus_curve_error": -0.0016383368994672396
+    },
+    {
+      "scenario": "1mm_integer_subset",
+      "method": "two_point_trend",
+      "n": 548,
+      "persistence_wins": 179,
+      "curve_wins": 118,
+      "ties": 251,
+      "persistence_non_tie_share": 0.6026936026936027,
+      "mean_persistence_minus_curve_error": -0.0016450307564812741
+    },
+    {
+      "scenario": "raw_hist_integer",
+      "method": "exponential",
+      "n": 552,
+      "persistence_wins": 408,
+      "curve_wins": 129,
+      "ties": 15,
+      "persistence_non_tie_share": 0.7597765363128491,
+      "mean_persistence_minus_curve_error": -0.0018568330921534505
+    },
+    {
+      "scenario": "1mm_hist_integer",
+      "method": "exponential",
+      "n": 552,
+      "persistence_wins": 349,
+      "curve_wins": 106,
+      "ties": 97,
+      "persistence_non_tie_share": 0.7670329670329671,
+      "mean_persistence_minus_curve_error": -0.0018397112908139634
+    },
+    {
+      "scenario": "target_nonint_among_hist_int",
+      "method": "exponential",
+      "n": 552,
+      "persistence_wins": 0,
+      "curve_wins": 0,
+      "ties": 552,
+      "persistence_non_tie_share": 0.0,
+      "mean_persistence_minus_curve_error": 0.0
+    },
+    {
+      "scenario": "raw_integer_subset",
+      "method": "exponential",
+      "n": 548,
+      "persistence_wins": 405,
+      "curve_wins": 128,
+      "ties": 15,
+      "persistence_non_tie_share": 0.7598499061913696,
+      "mean_persistence_minus_curve_error": -0.0018619340822040966
+    },
+    {
+      "scenario": "1mm_integer_subset",
+      "method": "exponential",
+      "n": 548,
+      "persistence_wins": 346,
+      "curve_wins": 105,
+      "ties": 97,
+      "persistence_non_tie_share": 0.7671840354767184,
+      "mean_persistence_minus_curve_error": -0.0018434471323978022
+    },
+    {
+      "scenario": "raw_hist_integer",
+      "method": "gompertz",
+      "n": 552,
+      "persistence_wins": 390,
+      "curve_wins": 107,
+      "ties": 55,
+      "persistence_non_tie_share": 0.7847082494969819,
+      "mean_persistence_minus_curve_error": -0.007569759821676516
+    },
+    {
+      "scenario": "1mm_hist_integer",
+      "method": "gompertz",
+      "n": 552,
+      "persistence_wins": 310,
+      "curve_wins": 77,
+      "ties": 165,
+      "persistence_non_tie_share": 0.8010335917312662,
+      "mean_persistence_minus_curve_error": -0.0075748243547423925
+    },
+    {
+      "scenario": "target_nonint_among_hist_int",
+      "method": "gompertz",
+      "n": 552,
+      "persistence_wins": 0,
+      "curve_wins": 0,
+      "ties": 552,
+      "persistence_non_tie_share": 0.0,
+      "mean_persistence_minus_curve_error": 0.0
+    },
+    {
+      "scenario": "raw_integer_subset",
+      "method": "gompertz",
+      "n": 548,
+      "persistence_wins": 389,
+      "curve_wins": 104,
+      "ties": 55,
+      "persistence_non_tie_share": 0.7890466531440162,
+      "mean_persistence_minus_curve_error": -0.007629376386234849
+    },
+    {
+      "scenario": "1mm_integer_subset",
+      "method": "gompertz",
+      "n": 548,
+      "persistence_wins": 309,
+      "curve_wins": 75,
+      "ties": 164,
+      "persistence_non_tie_share": 0.8046875,
+      "mean_persistence_minus_curve_error": -0.007635160471866773
+    }
+  ]
+}

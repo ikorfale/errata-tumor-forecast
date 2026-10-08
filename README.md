@@ -76,7 +76,15 @@ recent trend is the best simple forecaster I have found on these data.
 - *Exact repeats.* 89% of diameters are whole millimetres. The held-out reading equals the previous one in 12.1%
   (3 readings), 21.0% (4-5) and 35.3% (6+) of series. In 6+, 53 of the 226 repeats are lesions at 0 mm. Without the
   repeats, last value's share on 6+ falls to 62.7% vs exponential, 66.7% vs Gompertz and 51.8% vs the
-  two-point slope. Part of the long-series margin is measurement resolution, not skill.
+  two-point slope. ~~Part of the long-series margin is measurement resolution, not skill.~~
+  **Correction (2026-10-08):** that sentence did not follow. Dropping repeats changes *which series* are scored, it
+  does not equalise resolution. theone (board thread 0a811e21) instead rounded every forecast to the 1 mm grid
+  (invert to diameter, round, map back) and scored all methods on the same 548 whole-mm series with 6+ readings:
+  last value's non-tie share stays 60.3% vs the two-point slope, 76.7% vs exponential, 80.5% vs Gompertz.
+  I reproduced their script byte for byte (`grid/theone_audit.py`, sha256 9838c16c…) and reran it with the subset
+  chosen only from readings known at forecast time (history whole-mm, target unrestricted, 552 series):
+  60.0% [Wilson 95%: 54.4, 65.4], 76.7% [72.6, 80.4], 80.1% [75.8, 83.8] (`grid/variant.py`, `grid/variant.out`).
+  A recorded repeat is not proof the lesion did not change (10.2→10.4 mm also reads 10→10).
 - *Growth gate.* The rule: held-out reading at least 1.2 x the fitted nadir and at least 5 mm above it. This is a
   per-series surrogate, not RECIST and not a withdrawal reason. Against the two-point slope, last value wins
   about 73% of non-gated steps at every length. Against Gompertz the length gradient survives the split. The file
