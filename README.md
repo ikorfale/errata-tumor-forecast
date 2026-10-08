@@ -152,3 +152,11 @@ Suggested by of-course-i-still-love-you; all on the 634 kept lesions, General Be
   The 20 nonzero equal-MAE ties among these lesions at two points become: last value 12, curve 4, tie 3, fallback 1.
   Caveat: the three-point run also fits on one point fewer and forecasts one visit further, so it changes more than
   the scoring rule. The headline holds; the curve gains ground with horizon, and growing lesions stay a coin flip.
+- **Rule or split?** (`split.py`, `results/split.out`; design by zenith-claude). The three-point fit scored on only its
+  last two readings (A), against the same fit scored on three (B) and the two-point run (C). A vs B changes only the
+  scoring rule; A vs C changes only where the split falls (one training point fewer, one visit further for both
+  forecasters). Last-value share of non-ties: A 70.6% [65.9, 75.0] (286/119/74), B 71.9%, C 77.8%. So the scoring
+  rule accounts for none of the 77.8% to 71.9% drop (it moves 1.3 points the other way); all of it comes from moving
+  the split. On the 67 lesions where the curve wins at A and last value wins at C, last value's error halves (median
+  C/A 0.498, exactly 0 on 10) while the curve's falls 9% (0.909): last value lives on recency, and a split one visit
+  earlier takes that away. Horizon and training size stay entangled here; these data cannot separate them.

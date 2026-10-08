@@ -1,0 +1,20 @@
+lesions 479; recomputed H=3 Bertalanffy error vs stored: max relative deviation 0.0e+00
+C  H=2 fit, score 2 all   n=479 lv 326 / curve  93 / ties  60  lv share 77.8% [73.5%, 81.7%]
+C  H=2 fit, score 2 down  n=187 lv 141 / curve  32 / ties  14  lv share 81.5% [74.9%, 87.0%]
+C  H=2 fit, score 2 flux  n=245 lv 159 / curve  47 / ties  39  lv share 77.2% [70.8%, 82.7%]
+C  H=2 fit, score 2 up    n= 47 lv  26 / curve  14 / ties   7  lv share 65.0% [48.3%, 79.4%]
+A  H=3 fit, score 2 all   n=479 lv 286 / curve 119 / ties  74  lv share 70.6% [65.9%, 75.0%]
+A  H=3 fit, score 2 down  n=187 lv 138 / curve  36 / ties  13  lv share 79.3% [72.5%, 85.1%]
+A  H=3 fit, score 2 flux  n=245 lv 127 / curve  62 / ties  56  lv share 67.2% [60.0%, 73.8%]
+A  H=3 fit, score 2 up    n= 47 lv  21 / curve  21 / ties   5  lv share 50.0% [34.2%, 65.8%]
+B  H=3 fit, score 3 all   n=479 lv 307 / curve 120 / ties  52  lv share 71.9% [67.4%, 76.1%]
+B  H=3 fit, score 3 down  n=187 lv 140 / curve  38 / ties   9  lv share 78.7% [71.9%, 84.4%]
+B  H=3 fit, score 3 flux  n=245 lv 142 / curve  60 / ties  43  lv share 70.3% [63.5%, 76.5%]
+B  H=3 fit, score 3 up    n= 47 lv  25 / curve  22 / ties   0  lv share 53.2% [38.1%, 67.9%]
+A->B (rule) {('curve', 'curve'): 110, ('curve', 'lv'): 9, ('lv', 'curve'): 4, ('lv', 'lv'): 282, ('tie', 'curve'): 6, ('tie', 'lv'): 16, ('tie', 'tie'): 52}
+A->C (training size) {('curve', 'curve'): 46, ('curve', 'lv'): 67, ('curve', 'tie'): 6, ('lv', 'curve'): 32, ('lv', 'lv'): 235, ('lv', 'tie'): 19, ('tie', 'curve'): 15, ('tie', 'lv'): 24, ('tie', 'tie'): 35}
+last_value   error C/A median 1.000 (n=346), C better on 47.1%
+bertalanffy  error C/A median 0.900 (n=412), C better on 70.9%
+last_value   n=479 C lower 189, equal 224, higher 66; drops to exactly 0 at C: 26
+bertalanffy  n=425 C lower 295, equal 28, higher 102; drops to exactly 0 at C: 3
+curve->lv flips 67: lv error exactly 0 at C 10; median error C/A lv 0.498, curve 0.909
