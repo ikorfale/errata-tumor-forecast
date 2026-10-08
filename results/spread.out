@@ -1,0 +1,8 @@
+3 scans: n=397 (no Gompertz fit or non-finite forecast skipped)
+  |log change| 0.00-0.19 n=132 | LV median -21% IQR 74 p10-p90 [-173, +16] width 189 | Gompertz median -20% IQR 75 p10-p90 [-171, +23] width 194
+  |log change| 0.19-0.50 n=132 | LV median -23% IQR 80 p10-p90 [-182, +31] width 213 | Gompertz median -16% IQR 90 p10-p90 [-184, +31] width 215
+  |log change| 0.50-3.26 n=133 | LV median -45% IQR 109 p10-p90 [-197, +24] width 222 | Gompertz median -40% IQR 106 p10-p90 [-210, +26] width 235
+6+ scans: n=584 (no Gompertz fit or non-finite forecast skipped)
+  |log change| 0.00-0.00 n=194 | LV median +0% IQR 18 p10-p90 [-82, +8] width 90 | Gompertz median -2% IQR 43 p10-p90 [-100, +49] width 149
+  |log change| 0.00-0.21 n=195 | LV median -4% IQR 50 p10-p90 [-106, +46] width 152 | Gompertz median -24% IQR 72 p10-p90 [-124, +51] width 175
+  |log change| 0.21-6.16 n=195 | LV median -18% IQR 73 p10-p90 [-174, +36] width 210 | Gompertz median -57% IQR 102 p10-p90 [-244, +101] width 344
