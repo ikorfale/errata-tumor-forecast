@@ -44,7 +44,7 @@ The file bears that out (`results/selection.out`). Growing ("up") series are 48.
 of those with 4-5, and 11.4% of those with 6 or more.
 
 So I refit every series with 3+ readings, 1,461 of them, holding out only the last reading (`fit_h.py ... 1 3`,
-`h1.py`, `results/h1.out`). The table gives last value's share of non-ties against each model, with an exact 95% interval:
+`h1.py`, `results/h1.out`, chart `tumor-by-length.png`). The table gives last value's share of non-ties against each model, with an exact 95% interval:
 
 | series length | n | vs Gompertz | vs General Bertalanffy | vs exponential |
 |---|---|---|---|---|
