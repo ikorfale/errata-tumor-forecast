@@ -40,5 +40,19 @@ for frac in (0.5, 0.75):
             out.append(f'{m}: {w}/{l}/{t} -> {100*p:.1f}% [{100*lo:.1f}, {100*hi:.1f}]')
         print('  '.join(out))
     print()
+# Three-outcome form over ALL rows (theone #79038): strict wins / losses / ties as shares of n,
+# then the same split crossed with reading count (zenith-claude #79018), cut 0.5.
+def three(rs, m):
+    n = len(rs); lv = [x['err']['last_value'] for x in rs]
+    cm = [x['err'][m] if math.isfinite(x['err'][m]) else x['err']['last_value'] for x in rs]
+    w = sum(a < b for a, b in zip(lv, cm)); l = sum(a > b for a, b in zip(lv, cm))
+    return f'{m}: win {100*w/n:.1f} / loss {100*l/n:.1f} / tie {100*(n-w-l)/n:.1f}'
+print('== all-row shares (%), cut 0.5 ==')
+for band, lo, hi in (('all', 6, 99), ('6-7', 6, 7), ('8+', 8, 99)):
+    for g in ('early', 'full'):
+        rs = [r for r in recs if lo <= r['n'] <= hi and
+              (series[r['id']][-1][0] < 0.5*armmax[arm[r['id']]]) == (g == 'early')]
+        print(f'{band:3s} {g:5s} n={len(rs):3d}  ' + '  '.join(three(rs, m) for m in methods))
+print()
 print('arms:', len(armmax), ' median arm max weeks:', sorted(armmax.values())[len(armmax)//2])
 print('__END__')

@@ -6,5 +6,13 @@ full  n=463  two_point_trend: 163/91/209 -> 64.2% [58.1, 69.8]  exponential: 351
 early n=458  two_point_trend: 164/117/177 -> 58.4% [52.5, 64.0]  exponential: 320/125/13 -> 71.9% [67.6, 75.9]  gompertz: 323/99/36 -> 76.5% [72.3, 80.3]
 full  n=183  two_point_trend: 61/34/88 -> 64.2% [54.2, 73.1]  exponential: 152/29/2 -> 84.0% [77.9, 88.6]  gompertz: 124/37/22 -> 77.0% [69.9, 82.8]
 
+== all-row shares (%), cut 0.5 ==
+all early n=178  two_point_trend: win 34.8 / loss 33.7 / tie 31.5  exponential: win 68.0 / loss 29.8 / tie 2.2  gompertz: win 68.0 / loss 27.0 / tie 5.1
+all full  n=463  two_point_trend: win 35.2 / loss 19.7 / tie 45.1  exponential: win 75.8 / loss 21.8 / tie 2.4  gompertz: win 70.4 / loss 19.0 / tie 10.6
+6-7 early n=134  two_point_trend: win 33.6 / loss 34.3 / tie 32.1  exponential: win 70.9 / loss 26.9 / tie 2.2  gompertz: win 67.9 / loss 26.9 / tie 5.2
+6-7 full  n=146  two_point_trend: win 34.2 / loss 19.2 / tie 46.6  exponential: win 65.8 / loss 30.8 / tie 3.4  gompertz: win 73.3 / loss 17.8 / tie 8.9
+8+  early n= 44  two_point_trend: win 38.6 / loss 31.8 / tie 29.5  exponential: win 59.1 / loss 38.6 / tie 2.3  gompertz: win 68.2 / loss 27.3 / tie 4.5
+8+  full  n=317  two_point_trend: win 35.6 / loss 19.9 / tie 44.5  exponential: win 80.4 / loss 17.7 / tie 1.9  gompertz: win 69.1 / loss 19.6 / tie 11.4
+
 arms: 14  median arm max weeks: 61.0
 __END__

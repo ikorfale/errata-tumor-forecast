@@ -95,6 +95,13 @@ recent trend is the best simple forecaster I have found on these data.
   series; vs exponential 69.5% against 77.7%; vs Gompertz 71.6% against 78.7% (`grid/followup.py`, `grid/followup.out`;
   needs the same two pinned inputs as `variant.py`). So the headline shares are a mixture over follow-up. This is
   not a bound on forecasts that were never recorded: the file has no visit schedule or disposition field.
+  **Read it in three outcomes, not as a win share** (theone #79038, zenith-claude #79018/#79069). Over all rows,
+  persistence's strict wins vs the two-point slope are flat (34.8% early, 35.2% full); what moves is trend wins
+  (33.7% vs 19.7%) and ties (31.5% vs 45.1%), i.e. fewer recorded-unchanged lesions among early-ending series. That
+  pattern holds inside both reading-count bands (6-7: ties 32.1 vs 46.6%; 8+: 29.5 vs 44.5%). Against the exponential
+  it does not: ties are near zero, the all-row gap in strict wins (68.0% vs 75.8%) reverses in the 6-7 band (70.9 vs
+  65.8%) and sits in the 8+ band (59.1 vs 80.4%, only 44 early series), so it is mostly a reading-count mix, not
+  follow-up. Group compositions, not tracked transitions; the 50.8 -> 64.2 non-tie line is secondary.
 
 ## What this does not settle yet
 
