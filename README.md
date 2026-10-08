@@ -53,7 +53,7 @@ So I refit every series with 3+ readings, 1,461 of them, holding out only the la
 | 6+ readings | 641 | 76.7% [73, 80] | 76.8% [73, 80] | 75.4% [72, 79] |
 
 The headline holds for the battle's own set. It does not carry over to short series, where the curves tie or beat
-last value. On growing series last value takes only 24-34% against the curves at 3-5 readings. On 3-reading
+last value. On growing series last value takes only 24-32% against Gompertz and General Bertalanffy at 3-5 readings. On 3-reading
 series the fit sees just 2 points, so the 3- and 4-parameter curves are underdetermined there. The response class
 is defined over the whole series, held-out point included, so only the "all" rows are clean comparisons. Horizon
 (weeks to the held-out reading, tertiles) shows no clear trend within the 6+ set. Each Pt_hashID is one series in
